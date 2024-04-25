@@ -17,4 +17,8 @@ const del = (id) => {
     cache.del(id);
 }
 
-module.exports = {get, set, del}
+const del_all = () => {
+    cache.flushAll();
+}
+
+module.exports = {get, set, del, del_all}
