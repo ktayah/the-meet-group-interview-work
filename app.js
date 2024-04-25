@@ -1,0 +1,14 @@
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+
+const cacheRoutes = require('./routes/cacheRoutes');
+
+const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use('/api/v1/cache', cacheRoutes);
+
+module.exports = app;
