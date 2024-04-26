@@ -1,5 +1,5 @@
 const cache = require("../../src/services/cache");
-const helpers = require("../../src/utils/testHelpers");
+const helpers = require("../testHelpers");
 
 afterEach(() => {
     cache.del_all();
