@@ -1,8 +1,7 @@
 const express = require('express');
-const path = require('path');
 const bodyParser = require('body-parser');
 
-const cacheRoutes = require('./routes/cacheRoutes');
+const cacheRoutes = require('./src/routes/cacheRoutes');
 
 const app = express();
 

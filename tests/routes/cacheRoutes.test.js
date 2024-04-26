@@ -1,7 +1,7 @@
 const request = require('supertest');
 const app = require("../../app");
-const cache = require("../../services/cache");
-const helpers = require("../../utils/testHelpers");
+const cache = require("../../src/services/cache");
+const helpers = require("../../src/utils/testHelpers");
 
 afterEach(() => {
     cache.del_all();
