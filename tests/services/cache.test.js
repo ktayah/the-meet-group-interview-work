@@ -1,4 +1,5 @@
 const cache = require("../../services/cache");
+const helpers = require("../../utils/testHelpers");
 
 afterEach(() => {
     cache.del_all();
@@ -34,7 +35,7 @@ describe("cache.set", () => {
         expect(cache.get(id)).not.toBeUndefined();
 
         // Wait for ttl to be invoked
-        await sleep(100);
+        await helpers.sleep(100);
         expect(cache.get(id)).toBeUndefined();
     });
 });
@@ -50,7 +51,3 @@ describe("cache.del", () => {
         expect(cache.get(id)).toBeUndefined();
     });
 });
-
-const sleep = (ms) => {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}

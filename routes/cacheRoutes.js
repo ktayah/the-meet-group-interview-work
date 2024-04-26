@@ -18,7 +18,7 @@ router.post('/', function(req, res, next) {
   const {id, value, ttl} = req.body;
   appCache.set(id, value, ttl);
 
-  res.json({result: "ok"})
+  res.status(201).json({result: "ok"})
 });
 
 /* DELETE key-value */
